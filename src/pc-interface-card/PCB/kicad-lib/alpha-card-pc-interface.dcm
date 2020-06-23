@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STL6P3LLH6
+D P-channel 30 V, 0.024 Ω typ., 6 A STripFET™ H6 Power MOSFET in a PowerFLAT™ 3.3 x 3.3 package
+K transistor PMOS P-MOS P-MOSFET
+F ~
+$ENDCMP
+#
+#End Doc Library

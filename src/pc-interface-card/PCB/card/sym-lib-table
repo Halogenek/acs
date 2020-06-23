@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name 10018784-10201TLF)(type Legacy)(uri ${KIPRJMOD}/../kicad-lib/10018784-10201TLF.lib)(options "")(descr ""))
+  (lib (name alpha-card-pc-interface)(type Legacy)(uri /home/halogenek/Praca/halidelabs/alpha-card-pc-interface/src/pcb/kicad-lib/alpha-card-pc-interface.lib)(options "")(descr ""))
+)
