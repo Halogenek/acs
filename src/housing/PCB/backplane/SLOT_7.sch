@@ -3,27 +3,27 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 9
-Title ""
+Sheet 8 9
+Title "ACS backplane"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "1"
+Comp "Halidelabs"
+Comment1 "contact@halidelabs.eu"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
 L 10018784-10201TLF:10018784-10201TLF J?
-U 1 1 5DF52F0A
+U 1 1 5DF52F0B
 P 5600 3950
-AR Path="/5DF19C0C/5DF52F0A" Ref="J?"  Part="1" 
-AR Path="/5DF2A71E/5DF52F0A" Ref="J?"  Part="1" 
-AR Path="/5DF2E10A/5DF52F0A" Ref="J?"  Part="1" 
-AR Path="/5DF2E1F8/5DF52F0A" Ref="J?"  Part="1" 
-AR Path="/5DF2E248/5DF52F0A" Ref="J?"  Part="1" 
-AR Path="/5DF2E24C/5DF52F0A" Ref="J8"  Part="1" 
-F 0 "J8" H 5600 5820 50  0000 C CNN
+AR Path="/5DF19C0C/5DF52F0B" Ref="J?"  Part="1" 
+AR Path="/5DF2A71E/5DF52F0B" Ref="J?"  Part="1" 
+AR Path="/5DF2E10A/5DF52F0B" Ref="J?"  Part="1" 
+AR Path="/5DF2E1F6/5DF52F0B" Ref="J?"  Part="1" 
+AR Path="/5DF2E246/5DF52F0B" Ref="J?"  Part="1" 
+AR Path="/5DF2E24A/5DF52F0B" Ref="J7"  Part="1" 
+F 0 "J7" H 5600 5820 50  0000 C CNN
 F 1 "10018784-10201TLF" H 5600 5729 50  0000 C CNN
 F 2 "kicad-lib:CONN_10018784-10201TLF" H 5650 4450 50  0001 L BNN
 F 3 "10018784-10201Tlf-Pci Express 2X32 Pos Bk / Tray" H 5650 4450 50  0001 L BNN
@@ -161,12 +161,20 @@ Text GLabel 6300 3750 2    50   Input ~ 0
 P_GND
 Wire Wire Line
 	6300 3750 6200 3750
+Wire Wire Line
+	4950 3350 4950 3550
+Wire Wire Line
+	4950 3550 5000 3550
 Connection ~ 4950 3350
 Wire Wire Line
-	4950 3850 5000 3850
+	4950 3550 4950 3650
 Wire Wire Line
-	4950 3350 4950 3850
-NoConn ~ 5000 3550
-NoConn ~ 5000 3650
-NoConn ~ 5000 3750
+	4950 3650 5000 3650
+Connection ~ 4950 3550
+Wire Wire Line
+	4950 3650 4950 3750
+Wire Wire Line
+	4950 3750 5000 3750
+Connection ~ 4950 3650
+NoConn ~ 5000 3850
 $EndSCHEMATC

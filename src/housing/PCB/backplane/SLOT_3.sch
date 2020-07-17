@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 9
-Title ""
+Title "ACS backplane"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "1"
+Comp "Halidelabs"
+Comment1 "contact@halidelabs.eu"
 Comment2 ""
 Comment3 ""
 Comment4 ""
