@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "Alpha Card PC Interface"
-Date "2020-04-12"
-Rev "1"
+Date "2020-07-26"
+Rev "2"
 Comp "Halidelabs"
 Comment1 "halidelabs.eu"
 Comment2 "contact@halidelabs.eu"

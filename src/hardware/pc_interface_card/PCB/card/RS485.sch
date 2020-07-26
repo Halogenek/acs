@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
 Title "Alpha Card PC Interface"
-Date "2020-04-12"
-Rev "1"
+Date "2020-07-26"
+Rev "2"
 Comp "Halidelabs"
 Comment1 "halidelabs.eu"
 Comment2 "contact@halidelabs.eu"
@@ -274,8 +274,6 @@ NoConn ~ 6800 3600
 NoConn ~ 6800 3700
 Text Label 5300 5500 0    50   ~ 0
 FT_TXDEN
-Wire Wire Line
-	5300 5500 5700 5500
 $Comp
 L power:GND #PWR?
 U 1 1 5EA6FFA0
@@ -468,11 +466,6 @@ Wire Wire Line
 Connection ~ 6100 4950
 Wire Wire Line
 	5750 5400 5700 5400
-Wire Wire Line
-	5700 5400 5700 5500
-Connection ~ 5700 5500
-Wire Wire Line
-	5700 5500 5750 5500
 NoConn ~ 6800 3900
 Wire Wire Line
 	4050 1700 5450 1700
@@ -497,4 +490,21 @@ Text HLabel 4050 3700 0    50   Input ~ 0
 USB_D-
 Text HLabel 4050 3800 0    50   Input ~ 0
 USB_D+
+Wire Wire Line
+	5300 5500 5750 5500
+$Comp
+L power:GND #PWR?
+U 1 1 5F1F6338
+P 5700 5850
+AR Path="/5F1F6338" Ref="#PWR?"  Part="1" 
+AR Path="/5EA5E705/5F1F6338" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 5700 5600 50  0001 C CNN
+F 1 "GND" H 5705 5677 50  0000 C CNN
+F 2 "" H 5700 5850 50  0001 C CNN
+F 3 "" H 5700 5850 50  0001 C CNN
+	1    5700 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5400 5700 5850
 $EndSCHEMATC
