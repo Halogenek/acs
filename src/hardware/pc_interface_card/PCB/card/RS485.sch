@@ -381,8 +381,6 @@ Wire Wire Line
 	5700 1700 5450 1700
 Wire Wire Line
 	5450 1700 5450 1750
-Text Label 7200 1700 2    50   ~ 0
-PB_5V
 Wire Wire Line
 	7200 1700 6350 1700
 Connection ~ 6350 1700
@@ -420,8 +418,6 @@ Wire Wire Line
 	4950 2750 4950 2700
 Wire Wire Line
 	4950 2700 5000 2700
-Text Label 7200 2700 2    50   ~ 0
-PB_5V
 Wire Wire Line
 	7200 2700 6000 2700
 Connection ~ 6000 2700
@@ -459,8 +455,6 @@ Wire Wire Line
 	5800 4950 6100 4950
 Wire Wire Line
 	6100 4950 6100 5100
-Text Label 7200 4950 2    50   ~ 0
-PB_5V
 Wire Wire Line
 	7200 4950 6100 4950
 Connection ~ 6100 4950
@@ -507,4 +501,10 @@ F 3 "" H 5700 5850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5700 5400 5700 5850
+Text HLabel 7200 2700 2    50   BiDi ~ 0
+PB_5V
+Text HLabel 7200 1700 2    50   BiDi ~ 0
+PB_5V
+Text HLabel 7200 4950 2    50   BiDi ~ 0
+PB_5V
 $EndSCHEMATC
