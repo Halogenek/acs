@@ -60,12 +60,22 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static void LED_OK_Flash(void)
+void LED_OK_Flash(void)
 {
 	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);
 	HAL_Delay(100);
 	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);
 	HAL_Delay(100);
+}
+
+HAL_StatusTypeDef I2C_Write_USB_PD(uint8_t DevAddr, uint16_t Address ,uint8_t *DataW ,uint16_t Length)
+{
+	return  HAL_I2C_Mem_Write(&hi2c1,(DevAddr<<1), Address, USBPD_ADDR_SIZE, DataW, Length, 2000); // unmask all alarm status
+}
+
+HAL_StatusTypeDef I2C_Read_USB_PD(uint8_t DevAddr, uint16_t Address ,uint8_t *DataR ,uint16_t Length)
+{
+	return  HAL_I2C_Mem_Read(&hi2c1,(DevAddr<<1), Address, USBPD_ADDR_SIZE, DataR, Length ,2000);
 }
 
 /* USER CODE END 0 */
@@ -106,6 +116,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  LED_OK_Flash();
+  if (nvm_flash(USBPD_ADDR_0) == 0) LED_OK_Flash();
+  if (nvm_flash(USBPD_ADDR_1) == 0) LED_OK_Flash();
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -124,7 +138,7 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
@@ -136,7 +150,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  /** Initializes the CPU, AHB and APB busses clocks 
+  /** Initializes the CPU, AHB and APB busses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -280,7 +294,7 @@ void Error_Handler(void)
   * @retval None
   */
 void assert_failed(uint8_t *file, uint32_t line)
-{ 
+{
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */

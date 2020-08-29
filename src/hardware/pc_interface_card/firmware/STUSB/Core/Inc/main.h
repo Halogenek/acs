@@ -32,6 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "USBPD.h"
 
 /* USER CODE END Includes */
 
@@ -54,6 +55,9 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+void LED_OK_Flash(void);
+HAL_StatusTypeDef I2C_Write_USB_PD(uint8_t DevAddr, uint16_t Address ,uint8_t *DataW ,uint16_t Length);
+HAL_StatusTypeDef I2C_Read_USB_PD(uint8_t DevAddr, uint16_t Address ,uint8_t *DataR ,uint16_t Length);
 
 /* USER CODE END EFP */
 
