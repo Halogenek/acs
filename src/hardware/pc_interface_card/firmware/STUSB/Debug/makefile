@@ -46,8 +46,8 @@ USBPDprogrammer.bin \
 all: USBPDprogrammer.elf secondary-outputs
 
 # Tool invocations
-USBPDprogrammer.elf: $(OBJS) $(USER_OBJS) /home/halogenek/Praca/halidelabs/acs/src/hardware/pc_interface_card/firmware/STUSB/STM32F103RBTX_FLASH.ld
-	arm-none-eabi-gcc -o "USBPDprogrammer.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/halogenek/Praca/halidelabs/acs/src/hardware/pc_interface_card/firmware/STUSB/STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USBPDprogrammer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+USBPDprogrammer.elf: $(OBJS) $(USER_OBJS) /home/halogenek/PracaGit/halidelabs/acs/src/hardware/pc_interface_card/firmware/STUSB/STM32F103RBTX_FLASH.ld
+	arm-none-eabi-gcc -o "USBPDprogrammer.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/halogenek/PracaGit/halidelabs/acs/src/hardware/pc_interface_card/firmware/STUSB/STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USBPDprogrammer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -63,9 +63,9 @@ static void MX_I2C1_Init(void);
 void LED_OK_Flash(void)
 {
 	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_SET);
-	HAL_Delay(100);
+	HAL_Delay(200);
 	HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, GPIO_PIN_RESET);
-	HAL_Delay(100);
+	HAL_Delay(200);
 }
 
 HAL_StatusTypeDef I2C_Write_USB_PD(uint8_t DevAddr, uint16_t Address ,uint8_t *DataW ,uint16_t Length)

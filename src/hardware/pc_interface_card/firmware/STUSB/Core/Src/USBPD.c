@@ -118,13 +118,13 @@ uint8_t nvm_flash(uint8_t DevAddr)
 {
 	if (CUST_EnterWriteMode(DevAddr, USBPD_SECTOR_0 |USBPD_SECTOR_1 |USBPD_SECTOR_2 |USBPD_SECTOR_3 | USBPD_SECTOR_4 ) != 0 ) return 1;
 
-	//if (CUST_WriteSector(DevAddr, 0, Sector0) != 0) return 1;
-	//if (CUST_WriteSector(DevAddr, 1, Sector1) != 0) return 1;
-	//if (CUST_WriteSector(DevAddr, 2, Sector2) != 0) return 1;
-	//if (CUST_WriteSector(DevAddr, 3, Sector3) != 0) return 1;
-	//if (CUST_WriteSector(DevAddr, 4, Sector4) != 0) return 1;
+	if (CUST_WriteSector(DevAddr, 0, Sector0) != 0) return 1;
+	if (CUST_WriteSector(DevAddr, 1, Sector1) != 0) return 1;
+	if (CUST_WriteSector(DevAddr, 2, Sector2) != 0) return 1;
+	if (CUST_WriteSector(DevAddr, 3, Sector3) != 0) return 1;
+	if (CUST_WriteSector(DevAddr, 4, Sector4) != 0) return 1;
 
-	//if (CUST_ExitTestMode(DevAddr) != 0 ) return 1;
+	if (CUST_ExitTestMode(DevAddr) != 0 ) return 1;
 
 	return 0;
 }
