@@ -968,4 +968,73 @@ Wire Wire Line
 	5000 6650 6300 6650
 Text Label 1550 3100 0    50   ~ 0
 PB_2V7
+$Comp
+L Device:R R1
+U 1 1 5FB4E05C
+P 9100 5150
+F 0 "R1" V 9000 5150 50  0000 L CNN
+F 1 "22k" V 8900 5100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9030 5150 50  0001 C CNN
+F 3 "~" H 9100 5150 50  0001 C CNN
+	1    9100 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 5FB573CD
+P 8700 5150
+F 0 "JP1" H 8650 5400 50  0000 L CNN
+F 1 "I2C_PU" H 8600 5300 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 5150 50  0001 C CNN
+F 3 "~" H 8700 5150 50  0001 C CNN
+	1    8700 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5150 8950 5150
+Text HLabel 9300 5150 2    50   BiDi ~ 0
+PD_SCL
+Wire Wire Line
+	9300 5150 9250 5150
+$Comp
+L Device:R R2
+U 1 1 5FB7949D
+P 9100 5650
+F 0 "R2" V 9000 5650 50  0000 L CNN
+F 1 "22k" V 8900 5600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9030 5650 50  0001 C CNN
+F 3 "~" H 9100 5650 50  0001 C CNN
+	1    9100 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP2
+U 1 1 5FB794A7
+P 8700 5650
+F 0 "JP2" H 8650 5900 50  0000 L CNN
+F 1 "I2C_PU" H 8600 5800 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 5650 50  0001 C CNN
+F 3 "~" H 8700 5650 50  0001 C CNN
+	1    8700 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5650 8950 5650
+Wire Wire Line
+	9300 5650 9250 5650
+Text HLabel 9300 5650 2    50   BiDi ~ 0
+PD_SDA
+Text Label 8100 5150 0    50   ~ 0
+PB_2V7
+Wire Wire Line
+	8100 5150 8450 5150
+Wire Wire Line
+	8450 5150 8450 5650
+Wire Wire Line
+	8450 5650 8500 5650
+Connection ~ 8450 5150
+Wire Wire Line
+	8450 5150 8500 5150
+Text Notes 8250 4750 0    50   ~ 0
+Connect before programming
 $EndSCHEMATC
