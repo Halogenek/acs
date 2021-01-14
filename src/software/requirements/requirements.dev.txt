@@ -1,0 +1,4 @@
+### PROJECT DEV DEPENDENCIES
+
+# Helpful debugging package
+ipdb==0.13.4

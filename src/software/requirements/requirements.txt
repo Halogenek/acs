@@ -1,0 +1,4 @@
+### PROJECT DEPENDENCIES
+
+# Main dependency required for easy cross-platform serial port access
+pyserial==3.4
